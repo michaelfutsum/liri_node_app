@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mpneuman/liri_node_app/issues"
   },
-  "homepage": "https://github.com/mpneuman/liri_node_app#readme"
+  "homepage": "https://github.com/mpneuman/liri_node_app#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "request": "^2.83.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  }
 }
