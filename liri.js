@@ -3,14 +3,14 @@ require("dotenv").config();
 
 var action = process.argv[2];
 var value = process.argv[3];
-var Keys = require('./keys.js')
-var Twitter = require('twitter');
+var keys = require('./keys.js')
+var twitter = require('twitter');
 var request = require('request');
 var spotify = require('spotify');
 
 //console.log (keys.twitter);
-var client = new Twitter(keys.twitter);
-var spotify = new Spotify(keys.spotify);
+var client = new twitter(keys.twitter);
+var spotify = new spotify(keys.spotify);
 
 // TWITTER
 function myTweets() {
@@ -115,5 +115,3 @@ function movieThis() {
     default:
   }
 }
-
-start();
