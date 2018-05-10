@@ -9,8 +9,8 @@ var request = require('request');
 var spotify = require('spotify');
 
 //console.log (keys.twitter);
-var client = new twitter(keys.twitter);
-var spotify = new spotify(keys.spotify);
+var client = twitter(keys.twitter);
+var spotify = spotify(keys.spotify);
 
 // TWITTER
 function myTweets() {
