@@ -93,17 +93,16 @@ function movieThis() {
 }
 
 function doWhatItSays() {
-  fs.readFile("random.txt", "utf8", function(error, data) {
-    if (error) {
-      return console.log(error);
+  fs.readFile("random.txt", "utf8", function(err, data) {
+    if (err) {
+      logOutput.error(err);
+    } else {
+      var randomArray = data.split(",");
+
+      action = randomArray[0];
+      argument = randomArray[1];
+      start(action, argument);
     }
-
-    console.log(data);
-
-    whatDoNow = data.split(",");
-    whatDo = whatDoNow[0];
-    argument = whatDoNow[1];
-    start();
   });
 }
 
